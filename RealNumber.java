@@ -30,5 +30,13 @@ public class RealNumber{
     return false;
   }
 
+  /*
+    *Return a new RealNumber that has the value of:
+    *the sum of this and the other
+    */
+  public RealNumber add(RealNumber other){
+    RealNumber sum = new RealNumber(this.getValue() + other.getValue());
+    return sum;
+  }
 
 }
