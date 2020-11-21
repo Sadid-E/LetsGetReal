@@ -39,4 +39,13 @@ public class RealNumber{
     return sum;
   }
 
+  /*
+   *Return a new RealNumber that has the value of:
+   *the product of this and the other
+   */
+  public RealNumber multiply(RealNumber other){
+    RealNumber sum = new RealNumber(this.getValue() * other.getValue());
+    return sum;
+  }
+
 }
