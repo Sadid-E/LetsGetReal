@@ -48,4 +48,13 @@ public class RealNumber{
     return sum;
   }
 
+  /*
+    *Return a new RealNumber that has the value of:
+    *this divided by the other
+    */
+  public RealNumber divide(RealNumber other){
+    RealNumber sum = new RealNumber(this.getValue() / other.getValue());
+    return sum;
+  }
+
 }
