@@ -16,4 +16,18 @@ public class RationalNumber extends RealNumber{
     return ((double) numerator / (double) denominator);
   }
 
+  /**
+  *@return the numerator
+  */
+  public int getNumerator(){
+    return numerator;
+  }
+
+  /**
+  *@return the denominator
+  */
+  public int getDenominator(){
+    return denominator;
+  }
+
 }
