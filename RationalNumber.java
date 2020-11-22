@@ -92,4 +92,23 @@ public class RationalNumber extends RealNumber{
     denominator = denominator / gcd(n,d);
   }
 
+  /******************Operations Return a new RationalNumber!!!!****************/
+  /**
+  *Return a new RationalNumber that is the product of this and the other
+  */
+  public RationalNumber multiply(RationalNumber other){
+    RationalNumber p = new RationalNumber(this.getNumerator()*other.getNumerator(),
+                                          this.getDenominator()*other.getDenominator());
+    return p;
+  }
+
+  /**
+  *Return a new RationalNumber that is the this divided by the other
+  */
+  public RationalNumber divide(RationalNumber other){
+    RationalNumber d = new RationalNumber(this.getNumerator()*other.getDenominator(),
+                                          this.getDenominator()*other.getNumerator());
+    return d;
+  }
+
 }
