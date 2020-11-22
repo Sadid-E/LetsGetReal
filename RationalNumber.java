@@ -111,4 +111,24 @@ public class RationalNumber extends RealNumber{
     return d;
   }
 
+  /**
+  *Return a new RationalNumber that is the sum of this and the other
+  */
+  public RationalNumber add(RationalNumber other){
+    RationalNumber a = new RationalNumber((this.getNumerator()*other.getDenominator()) +
+                                          (other.getNumerator()*this.getDenominator()),
+                                           this.getDenominator()*other.getDenominator());
+    return a;
+  }
+
+  /**
+  *Return a new RationalNumber that this minus the other
+  */
+  public RationalNumber subtract(RationalNumber other){
+    RationalNumber s = new RationalNumber((this.getNumerator()*other.getDenominator()) -
+                                          (other.getNumerator()*this.getDenominator()),
+                                           this.getDenominator()*other.getDenominator());
+    return s;
+  }
+
 }
