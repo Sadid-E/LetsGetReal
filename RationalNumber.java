@@ -12,7 +12,7 @@ public class RationalNumber extends RealNumber{
     if (deno == 0) {
       nume = 0;
       deno = 1;
-    } 
+    }
     if (deno < 0) {
       nume = nume * -1;
       deno = deno * -1;
@@ -46,6 +46,14 @@ public class RationalNumber extends RealNumber{
   public RationalNumber reciprocal(){
     RationalNumber reciprocal = new RationalNumber(denominator, numerator);
     return reciprocal;
+  }
+
+  /**
+  *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
+  */
+  public boolean equals(RationalNumber other){
+    return (this.getNumerator() == other.getNumerator() &&
+            this.getDenominator() == other.getDenominator());
   }
 
 }
