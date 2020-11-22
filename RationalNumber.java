@@ -19,6 +19,7 @@ public class RationalNumber extends RealNumber{
     }
     numerator = nume;
     denominator = deno;
+    reduce();
   }
 
   public double getValue(){
@@ -61,6 +62,34 @@ public class RationalNumber extends RealNumber{
   */
   public String toString(){
     return numerator + "/" + denominator;
+  }
+
+  /**Calculate the GCD of two integers.
+  *@param a the first integers
+  *@param b the second integer
+  *@return the value of the GCD
+  */
+  private static int gcd(int a, int b){
+    /*use euclids method or a better one*/
+    int gcd = 1;
+    for (int i = 1; i <= Math.max(a,b); i++) {
+      if (a % i == 0 && b % i == 0) {
+        gcd = i;
+      }
+    }
+    return gcd;
+  }
+
+  /**
+  *Divide the numerator and denominator by the GCD
+  *This must be used to maintain that all RationalNumbers are
+  *reduced after construction.
+  */
+  private void reduce(){
+    int n = numerator;
+    int d = denominator;
+    numerator = numerator / gcd(n,d);
+    denominator = denominator / gcd(n,d);
   }
 
 }
