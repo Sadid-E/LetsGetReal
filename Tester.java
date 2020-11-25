@@ -42,12 +42,16 @@ public class Tester{
     System.out.println(i.equals(j));
     System.out.println(l.equals(m));
     System.out.println(l.toString());
+    System.out.println(k.toString());
     System.out.println(n);
     System.out.println(o);
     System.out.println(i.multiply(j));
     System.out.println(n.divide(o));
     System.out.println(i.add(j));
     System.out.println(n.subtract(o));
+    System.out.println(l.compareTo(m));
+    System.out.println(a.compareTo(g));
+    System.out.println(i.compareTo(j));
   }
 
 }
